@@ -4,12 +4,12 @@ import PostComment from '.';
 
 describe('Teste para o componente PostComment', () => {
     it('Deve renderizar o componente corretamente', () => {
-        render(<PostComment/>);
+        render(<PostComment />);
         expect(screen.getByText('Comentar')).toBeInTheDocument();
     });
 
     it('Deve adicionar dois comentários', () => {
-        render(<PostComment/>);
+        render(<PostComment />);
 
         // adiciona o primeiro comentário
         fireEvent.change(screen.getByTestId('comment-textarea'), {
@@ -18,7 +18,7 @@ describe('Teste para o componente PostComment', () => {
             }
         });
         fireEvent.click(screen.getByTestId('comment-button'));
-    
+
         // adiciona o segundo comentário
         fireEvent.change(screen.getByTestId('comment-textarea'), {
             target: {
